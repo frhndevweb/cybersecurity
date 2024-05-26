@@ -71,8 +71,7 @@
         transform: translateY(0);
       }
     }
-
-    /* Copyright */
+    
     footer {
       text-align: center;
       margin-top: 50px;
@@ -85,7 +84,6 @@
   <ul id="threat-list"></ul>
   <footer>&copy; frhndevweb</footer>
   <script>
-    // Mendefinisikan data tentang cyber security
     const threats = [
       { name: "Malware", description: "Software yang disengaja dibuat untuk merusak atau mengganggu sistem komputer." },
       { name: "Phishing", description: "Upaya untuk mendapatkan informasi sensitif seperti kata sandi dan informasi kartu kredit dengan menyamar sebagai entitas tepercaya." },
@@ -95,7 +93,6 @@
       { name: "Social Engineering", description: "Penipuan yang memanipulasi orang untuk mengungkapkan informasi rahasia atau sensitif." }
     ];
 
-    // Fungsi untuk menampilkan ancaman cyber security
     function displayThreats() {
       const threatList = document.getElementById("threat-list");
       threats.forEach(threat => {
@@ -105,7 +102,6 @@
       });
     }
 
-    // Panggil fungsi untuk menampilkan ancaman cyber security
     displayThreats();
   </script>
 </body>
