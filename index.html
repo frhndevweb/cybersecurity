@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Security Threats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      animation: slideIn 0.5s forwards;
+    }
+
+    li strong {
+      color: #1e90ff;
+    }
+
+    /* Hover effect */
+    li:hover {
+      background-color: #f9f9f9;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Animasi di bagian bawah */
+    li::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #1e90ff;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    li:hover::after {
+      transform: scaleX(1);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Copyright */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cyber Security Threats</h1>
+  <ul id="threat-list"></ul>
+  <footer>&copy; frhndevweb</footer>
+  <script>
+    // Mendefinisikan data tentang cyber security
+    const threats = [
+      { name: "Malware", description: "Software yang disengaja dibuat untuk merusak atau mengganggu sistem komputer." },
+      { name: "Phishing", description: "Upaya untuk mendapatkan informasi sensitif seperti kata sandi dan informasi kartu kredit dengan menyamar sebagai entitas tepercaya." },
+      { name: "DDoS Attacks", description: "Serangan yang bertujuan untuk membuat sumber daya suatu sistem tidak tersedia untuk pengguna yang sah dengan membanjiri layanan tersebut dengan permintaan dari berbagai sumber." },
+      { name: "Ransomware", description: "Jenis malware yang mengenkripsi data pengguna dan meminta pembayaran tebusan untuk mendapatkan kunci dekripsi." },
+      { name: "Spyware", description: "Software yang secara diam-diam mengumpulkan informasi tentang aktivitas pengguna tanpa sepengetahuan mereka." },
+      { name: "Social Engineering", description: "Penipuan yang memanipulasi orang untuk mengungkapkan informasi rahasia atau sensitif." }
+    ];
+
+    // Fungsi untuk menampilkan ancaman cyber security
+    function displayThreats() {
+      const threatList = document.getElementById("threat-list");
+      threats.forEach(threat => {
+        const threatItem = document.createElement("li");
+        threatItem.innerHTML = `<strong>${threat.name}</strong>: ${threat.description}`;
+        threatList.appendChild(threatItem);
+      });
+    }
+
+    // Panggil fungsi untuk menampilkan ancaman cyber security
+    displayThreats();
+  </script>
+</body>
+</html>
